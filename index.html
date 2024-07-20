@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ERP System</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Customer Management</h2>
+        <form action="customer.php" method="post" id="customerForm">
+            <div class="form-group">
+                <label for="title">Title</label>
+                <select class="form-control" id="title" name="title" required>
+                    <option value="">Select</option>
+                    <option>Mr</option>
+                    <option>Mrs</option>
+                    <option>Miss</option>
+                    <option>Dr</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="first_name">First Name</label>
+                <input type="text" class="form-control" id="first_name" name="first_name" required>
+            </div>
+            <div class="form-group">
+                <label for="last_name">Last Name</label>
+                <input type="text" class="form-control" id="last_name" name="last_name" required>
+            </div>
+            <div class="form-group">
+                <label for="contact_number">Contact Number</label>
+                <input type="text" class="form-control" id="contact_number" name="contact_number" required>
+            </div>
+            <div class="form-group">
+                <label for="district">District</label>
+                <input type="text" class="form-control" id="district" name="district" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="add_customer">Add Customer</button>
+        </form>
+
+        <h2>Item Management</h2>
+        <form action="item.php" method="post" id="itemForm">
+            <div class="form-group">
+                <label for="item_code">Item Code</label>
+                <input type="text" class="form-control" id="item_code" name="item_code" required>
+            </div>
+            <div class="form-group">
+                <label for="item_name">Item Name</label>
+                <input type="text" class="form-control" id="item_name" name="item_name" required>
+            </div>
+            <div class="form-group">
+                <label for="item_category">Item Category</label>
+                <input type="text" class="form-control" id="item_category" name="item_category" required>
+            </div>
+            <div class="form-group">
+                <label for="item_sub_category">Item Sub Category</label>
+                <input type="text" class="form-control" id="item_sub_category" name="item_sub_category" required>
+            </div>
+            <div class="form-group">
+                <label for="quantity">Quantity</label>
+                <input type="number" class="form-control" id="quantity" name="quantity" required>
+            </div>
+            <div class="form-group">
+                <label for="unit_price">Unit Price</label>
+                <input type="number" step="0.01" class="form-control" id="unit_price" name="unit_price" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="add_item">Add Item</button>
+        </form>
+
+        <h2>Reports</h2>
+        <form action="report.php" method="post" id="reportForm">
+            <div class="form-group">
+                <label for="start_date">Start Date</label>
+                <input type="date" class="form-control" id="start_date" name="start_date" required>
+            </div>
+            <div class="form-group">
+                <label for="end_date">End Date</label>
+                <input type="date" class="form-control" id="end_date" name="end_date" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="invoice_report">Generate Invoice Report</button>
+            <button type="submit" class="btn btn-primary" name="invoice_item_report">Generate Invoice Item Report</button>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
